@@ -1,0 +1,20 @@
+default: &DEFAULT
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  template: template0
+  host: localhost
+  username: <%= `whoami`.strip.inspect %>
+  port: <%= ENV['DB_PORT'] || 5432 %>
+
+development:
+  <<: *DEFAULT
+  database: myspree_development
+
+production:
+  <<: *DEFAULT
+  database: myspree_development
+
+test: &TEST
+  <<: *DEFAULT
+  database: myspree_test
