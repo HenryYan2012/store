@@ -49,7 +49,7 @@ end
 
 gem 'spree', '~> 3.0.9'
 gem 'spree_gateway', '~> 3.0.0'
-gem 'spree_auth_devise', '~> 3.0.0'
+gem 'spree_auth_devise', '~> 3.0.6'
 gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '3-0-stable'
 gem 'spree_wishlist', github: 'spree-contrib/spree_wishlist', branch: '3-0-stable'
 gem 'spree_email_to_friend', github: 'spree-contrib/spree_email_to_friend', branch: '3-0-stable'
