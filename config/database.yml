@@ -13,7 +13,12 @@ development:
 
 production:
   <<: *DEFAULT
-  database: myspree_development
+  # database: myspree_development
+  pool: 10
+  database: <%= ENV["DATABASE"] || 'myspree_development' %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  username: <%= ENV["DATAUSER"] %>
+  password: <%= ENV["DATAPASSWD"] %>
 
 test: &TEST
   <<: *DEFAULT
